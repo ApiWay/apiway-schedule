@@ -14,6 +14,6 @@ COPY . /usr/src/app
 
 ENV PATH /usr/src/app/bin:$PATH
 
-EXPOSE 1883
+EXPOSE 3000
 
 CMD [ "npm", "start" ]
