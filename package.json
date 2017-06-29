@@ -23,11 +23,13 @@
   },
   "homepage": "https://github.com/apiway/apiway-schedule#readme",
   "dependencies": {
+    "apiway.js": "0.0.25",
     "bunyan": "^1.8.10",
     "kue": "^0.11.6",
-    "mqtt": "^2.8.2",
+    "kue-scheduler": "^0.7.3",
+    "mqtt": "^2.9.0",
     "node-schedule": "^1.2.3",
-    "promise": "^7.1.1",
+    "promise": "^7.3.1",
     "request": "^2.81.0"
   }
 }

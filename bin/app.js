@@ -7,9 +7,8 @@
 var config = require('../config')
 var bunyan = require('bunyan')
 var mqtt = require('mqtt')
-var AwSchedule = require('../lib/AwSchedule')
+var schedule = require('../lib/schedule')
 
-let awSchedule = new AwSchedule()
 let log = bunyan.createLogger({name:'schedule'})
 
 /**
@@ -33,17 +32,18 @@ client.on('error', onError);
  */
 
 function onConnect() {
-  client.subscribe(awSchedule.topic)
+  // client.subscribe(schedule.topic)
+  client.subscribe('apiway/schedule/+')
+  schedule.recoverJobs()
 }
 
 /**
  * Event listener for MQTT broker "message" event.
  */
-
 function onMessage(topic, message, packet) {
   log.info(`topic:${topic}`)
   log.info(`message:${message}`)
-  awSchedule.dispatch(topic, message)
+  schedule.dispatch(topic, message)
 }
 
 /**
