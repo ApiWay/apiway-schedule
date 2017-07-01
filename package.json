@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/app.js",
+    "dev": "node ./bin/dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,8 +24,9 @@
   },
   "homepage": "https://github.com/apiway/apiway-schedule#readme",
   "dependencies": {
-    "apiway.js": "0.0.25",
+    "apiway.js": "0.0.32",
     "bunyan": "^1.8.10",
+    "hashmap": "^2.1.0",
     "kue": "^0.11.6",
     "kue-scheduler": "^0.7.3",
     "mqtt": "^2.9.0",

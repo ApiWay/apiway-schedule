@@ -33,8 +33,8 @@ client.on('error', onError);
 
 function onConnect() {
   // client.subscribe(schedule.topic)
+  schedule.bootstrap()
   client.subscribe('apiway/schedule/+')
-  schedule.recoverJobs()
 }
 
 /**
