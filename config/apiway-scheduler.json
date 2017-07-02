@@ -4,17 +4,17 @@
   "metadata": {
     "name": "",
     "labels": {
-      "purpose": "TC-Running",
-      "instanceId": ""
+      "purpose": "Cron-Job-Scheduling",
+      "schedulerId": ""
     }
   },
   "spec": {
     "restartPolicy": "Never",
     "containers": [{
       "name": "apiway-scheduler",
-      "image": "539277938309.dkr.ecr.us-west-2.amazonaws.com/apiway-job:latest",
+      "image": "539277938309.dkr.ecr.us-west-2.amazonaws.com/apiway-scheduler:latest",
       "env": [{
-        "name": "instanceId",
+        "name": "schedulerId",
         "value": ""
       }]
     }]
