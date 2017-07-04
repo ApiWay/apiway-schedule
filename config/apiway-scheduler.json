@@ -1,0 +1,22 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "",
+    "labels": {
+      "purpose": "Cron-Job-Scheduling",
+      "schedulerId": ""
+    }
+  },
+  "spec": {
+    "restartPolicy": "Never",
+    "containers": [{
+      "name": "apiway-scheduler",
+      "image": "539277938309.dkr.ecr.us-west-2.amazonaws.com/apiway-scheduler:latest",
+      "env": [{
+        "name": "schedulerId",
+        "value": ""
+      }]
+    }]
+  }
+}
