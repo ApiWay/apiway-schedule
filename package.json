@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/apiway/apiway-schedule#readme",
   "dependencies": {
+    "apiway-pubsub": "latest",
     "apiway.js": "latest",
     "bunyan": "^1.8.10",
     "hashmap": "^2.1.0",
